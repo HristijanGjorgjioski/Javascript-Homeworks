@@ -22,12 +22,14 @@ console.log(convertCelsius(0));
 ////////////////////////////////////////////////////////////////////////
 
 //! In one function
-const convertTempToCelsiusAndFahrenheit = (temp) => {
-    const convertedToCelsius = ((temp - 32) * (5/9)).toFixed(0);
-    const convertedToFehrenheit = (temp * (9/5) + 32).toFixed(0);
+const convertTempToCelsiusAndFahrenheit = (celsius, fahrenheit) => {
+    const convertedToCelsius = ((fahrenheit - 32) * (5/9)).toFixed(0);
+    const convertedToFehrenheit = (celsius * (9/5) + 32).toFixed(0);
 
-    return `${temp} to celsius: ${convertedToCelsius} c\n${temp} to fahrenheit: ${convertedToFehrenheit} f`;
+    return (
+        `${fahrenheit} fahrenheit to celsius: ${convertedToCelsius} c\n${celsius} celsius to fahrenheit: ${convertedToFehrenheit} f`
+    );
 }
 
-console.log(convertTempToCelsiusAndFahrenheit(32));
+console.log(convertTempToCelsiusAndFahrenheit(32, 0));
 
